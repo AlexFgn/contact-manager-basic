@@ -1,0 +1,25 @@
+# / para todas las carpetas de ese archivo, sin / solo ignoramos ese archivo
+
+#Dependencias
+node_modules/    
+
+#salidas de Angular
+dist/
+out-tsc/
+.angular/
+
+#Archivo de datos de JSON-Server
+db.json
+
+#Log de npm/yarn  -> usamos * cuando queremos ignorar todos esos archivos de esa ramma
+npm-debug.log*
+yarn-error-log*
+
+#ajustes locales de VsCode
+.vscode/
+
+
+#node_modules/: elimina todas las dependencias instaladas
+#dist/, out-tsc/, angular/: carpetas de build y cache de angular
+#db.json: tu fichero real de base de datos local de JSON-SERVEr
+#npm-debug.log* y yarn-error-log* : logs de errorres de instalacion
