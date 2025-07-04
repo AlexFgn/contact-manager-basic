@@ -1,1 +1,35 @@
-<p>contact-add works!</p>
+<h2>Nuevo Formulario</h2>
+
+<!-- Formulario Angular
+  (ngSubmit)="save()"
+  Al enviar el formulario(submit), angular llama al metodo save() definido en el componente 'ts'
+   -->
+
+<form (ngSubmit)="save()">
+
+    <label>
+        Nombre:<br>
+        <input [(ngModel)]="name" name="name" required>
+        <!-- ngmodel= bindeo direccional = Mantiene sincronizada la propiedad name del componente con este input -->
+        <!-- name = "name" -->
+         <!-- nombre interno del control en el formulario (required para el ngModel) -->
+    </label>
+    <br/><br/>
+    <label>
+        Email: <br>
+        <input [(ngModel)]="email" name="email" required type="email" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"/>
+    </label>
+    <!-- html% usa la validacion nativa de formato correo -->
+     <!-- pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" = patron adicional para reforzar la validacion en "ANGULAR" -->
+
+     <br/><br/>
+     <label>
+        Telefono: <br>
+        <input [(ngModel)]="phone" name="phone">
+     </label>
+     <br><br>
+
+     <button type="submit">
+        Crear
+     </button>
+</form>
